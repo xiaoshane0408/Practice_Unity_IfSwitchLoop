@@ -6,8 +6,7 @@ public class Control : MonoBehaviour
     #region 練習1
     [Header("血條Bar")]
     public Slider slider;
-    private int _hp;
-    public int hp { get => _hp; set => _hp = value; }
+    public HP hp;
     [Header("提示字")]
     public Text alert;
     #endregion
@@ -42,17 +41,17 @@ public class Control : MonoBehaviour
     private void Update()
     {
         #region 練習1
-        hp = (int)slider.value;
-        Debug.Log(hp);
-        if (hp >= 70)
+        hp.hp = (int)slider.value;
+        Debug.Log(hp.hp);
+        if (hp.hp >= 70)
         {
             alert.text = "<color=#00DB00>" + "安全" + "</color>";
         }
-        else if(hp >= 30)
+        else if(hp.hp >= 30)
         {
             alert.text = "<color=#FFE153>" + "警告" + "</color>";
         }
-        else if(hp > 0)
+        else if(hp.hp > 0)
         {
             alert.text = "<color=#FF0000>" + "危險" + "</color>";
         }
