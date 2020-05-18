@@ -45,19 +45,19 @@ public class Control : MonoBehaviour
         Debug.Log(hp.hp);
         if (hp.hp >= 70)
         {
-            alert.text = "<color=#00DB00>" + "安全" + "</color>";
+            alert.text = "HP: " + "<color=#00DB00>" + hp.hp + " 安全" + "</color>";
         }
         else if(hp.hp >= 30)
         {
-            alert.text = "<color=#FFE153>" + "警告" + "</color>";
+            alert.text = "HP: " + "<color=#FFE153>" + hp.hp + " 警告" + "</color>";
         }
         else if(hp.hp > 0)
         {
-            alert.text = "<color=#FF0000>" + "危險" + "</color>";
+            alert.text = "HP: " + "<color=#FF0000>" + hp.hp + " 危險" + "</color>";
         }
         else
         {
-            alert.text = "<color=#4F4F4F>" + "你掛囉" + "</color>";
+            alert.text = "HP: " + "<color=#4F4F4F>" + hp.hp + " 你掛囉" + "</color>";
         }
         #endregion
 
